@@ -1,0 +1,8 @@
+= Shortest C# Fizz Buzz
+
+Yes I know that x is converted to a string even when we don't need that - but what else to do? :)
+
+----
+Enumerable.Range(1, 100).ToList().ForEach(x => Console.WriteLine(new[] { $"{x}", "fizz", "buzz", "fizz buzz" }[1 & 1 << x % 3 | 2 & 2 << x % 5]));
+----
+
